@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:#fff ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg");
+        }
+        .register-container{
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            
+        }
+        .login-form{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+        }
+        h2{
+            text-align: center;
+            color: black;
+        }
+        .input-group{
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            font-size: 14px;
+            color:#555;
+            margin-bottom: 5px;
+        }
+        input[type="name"],
+        input[type="address"],
+        input[type="number"],
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="comfirmpassword"]{
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+      
+        }
+        button{
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            margin-top: 10px;
+
+        }
+        #login-btn:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+        <div class="register-form">
+            <form action="\register.html" method="post">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" >
+                </div>
+                <div class="input-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address">
+                </div>
+                <div class="input-group">
+                    <label for="mobileNo">Mobile</label>
+                    <input type="number" id="mobileNo" name="mobileNo">
+                </div>
+                <div class="input-group">
+                    <label for="aadhaarNo">Aadhaar No</label>
+                    <input type="text" id="aadhaarNo" name="aadhaarNo">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com">
+                </div>
+                <!--<div class="input">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>-->
+                </div>
+                <div class="input-group">
+                    <label for="password">Create new password</label>
+                    <input type="password" id="password" name="password" required placeholder="Please enter password">
+                </div>
+                <div class="input-group">
+                    <label for="comfirmpassword">Comfirm password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

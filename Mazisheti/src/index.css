@@ -1,0 +1,83 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+  }
+  @layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Hide the floating Google Translate frame, balloon, and icon */
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+.goog-te-gadget-icon,
+#goog-gt-tt,
+.skiptranslate {
+  display: none !important;
+}
+
+
+body {
+  top: 0px !important;
+}
+
+html {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Remove padding added by Google Translate */
+body .goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+header, footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default body & html spacing */
+ body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Make root div full width and height */
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Optional: remove scrollbars caused by default spacing */
+* {
+  box-sizing: border-box;
+}

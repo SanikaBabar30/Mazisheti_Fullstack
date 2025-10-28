@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazisheti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div id="title">Mazisheti</div>
+        <div class="right-buttons">
+            <button id="login" onclick="window.location.href='login.html';">Login</button>
+            <button id="register" onclick="window.location.href='register.html';">Register</button>
+            
+        </div>
+    </div>
+    <div id="marquee">
+    <marquee >this new scheme click here to more information</marquee>
+    </div>
+    <div class="slider">
+        <div class="slides">
+            <!-- Radio buttons for automatic navigation -->
+            <input type="radio" name="radio-btn" id="radio1" checked>
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+            <!-- Slide images -->
+            <div class="slide first">
+                <img src="/pexels-blooddrainer-221016.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="/pexels-blooddrainer-221016.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="image3.jpg" alt="Slide 3">
+            </div>
+        </div>
+
+        <!-- Manual Navigation -->
+        <div class="navigation-manual">
+            <label class="manual-btn" for="radio1"></label>
+            <label class="manual-btn" for="radio2"></label>
+            <label class="manual-btn" for="radio3"></label>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Automatic Sliding
+        let counter = 1;
+        setInterval(() => {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 3) {
+                counter = 1;
+            }
+        }, 3000); // Slides change every 3 seconds
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</form></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:#fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg");
+        }
+        .login-container{
+            width: 100%;
+            max-width:  400px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius:8px ;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .login-form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        h2{
+            text-align: center;
+            color:black ;
+        }
+        .input-group{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        label{
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+            
+        }
+        
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    
+        button{
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #EFE3C2;
+           
+        }
+        #login-btn {
+        background-color: #007BFF;
+        color: white;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        margin-top: 10px;
+        }
+        
+        #login-btn:hover {
+        background-color: #0056b3;
+    }
+        .google-btn {
+        background-color: #db4437;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .google-btn:hover {
+        background-color: #c1351d;
+    }
+    .google-btn:before{
+        content: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Google_icon.svg');
+        width: 20px;
+        height: 20px;
+
+    }
+    .register-option{
+        text-align: center;
+        text-decoration: none;
+        
+    }
+    
+        
+    </style>
+</head>
+<body>
+   
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form action="/login.html" method="POST" >
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <button type="submit" id="login-btn">Login</button>
+        </form>
+
+        <!-- Google Sign In Button -->
+        <button class="google-btn" onclick="window.location.href='/auth/google'">Sign with google</button>
+        <div class="register-option">
+            <p>Don't have an account?<a href="/register.html">Register</a></p>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

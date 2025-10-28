@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    
+    display: flex;
+    justify-content: space-between; /* Space between title and buttons */
+    align-items: center; /* Vertical alignment */
+    height: 50px;
+    background-color: rgb(18, 53, 36);
+    padding: 0 10px; /* Add some padding to the sides */
+}
+
+#title {
+    color: white;
+
+}
+
+#login, #register {
+    margin: 0; /* Remove extra margins */
+}
+#login:hover{
+    background-color: rgb(239, 227, 194);
+}
+#register:hover{
+    background-color: rgb(239, 227, 194);
+}
+
+
+.right-buttons {
+    display: flex; /* Align buttons side by side */
+    gap: 10px; /* Add spacing between the buttons */
+}
+#marquee{
+    
+    height: 20px;
+    border: 2px solid black;
+    color:red;
+    cursor: pointer;
+}
+#marquee:hover{
+     color: black;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.slider {
+    width: 100%;
+    height: 300px; /* Reduced height for better visuals */
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 1s ease;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navigation-manual {
+    position: absolute;
+    bottom: 20px; /* Moved closer to the slider */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.manual-btn {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent;
+}
+
+.manual-btn:hover {
+    background: #fff;
+}
+
+/* Automatic navigation */
+input[type="radio"] {
+    display: none; /* Hide radio buttons */
+}
+
+#radio1:checked ~ .slides {
+    transform: translateX(0%);
+}
+
+#radio2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#radio3:checked ~ .slides {
+    transform: translateX(-200%);
+}
